@@ -17,7 +17,7 @@ pipeline {
     stages {
 		stage('Terraform code checkout') { 
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rstraining4/2024-stocks-app-ecs.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rstraining4/2024-terraform-ecs-cluster.git']]])
             }
         }
         stage('Terraform action - init') { 
